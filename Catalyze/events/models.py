@@ -39,7 +39,7 @@ class Event(models.Model):
     # time
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
-    description = models.CharField(max_length=240)
+    description = models.TextField()
 
 
     # def publish(self):
