@@ -21,7 +21,7 @@ from django.db import models
 #     permit
 
 from django.db import models
-# from django.utils import timezone
+from django.utils import timezone
 
 
 class Event(models.Model):
@@ -40,11 +40,12 @@ class Event(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     description = models.TextField()
-
+    published_date = models.DateTimeField(
+            blank=True, null=True)
 
     # def publish(self):
-    #     self.published_date = timezone.now()
-    #     self.save()
+        # self.published_date = timezone.now()
+        # self.save()
 
     def __str__(self):
         return self.title
