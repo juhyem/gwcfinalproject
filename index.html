@@ -18,19 +18,31 @@
       <!--div id="branding">
       <h1>Catalyze</h1>
     </div-->
-      <div class="dropdown">
-        <button class="dropbtn">Menu</button>
-        <div class="dropdown-content">
-          <nav>
-          <ul>
-            <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="create.html">Create Event</a></li>
-            <li><a href="events.html">Find Event</a></li>
-            <li><a href="other.html">What else?</a></li>
-          </ul>
-          </nav>
-        </div>
-      </div>
+      <div id="mySidenav" class="sidenav">
+<ul>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <li class="current"><a href="index.html">Home</a></li>
+  <li><a href="https://catalyze.pythonanywhere.com">Create Event</a></li>
+  <li><a href="events.html">Find Event</a></li>
+  <li><a href="other.html">What else?</a></li>
+</ul>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
    </header>
 
   <section id="showcase">
@@ -42,15 +54,21 @@
 
  <section id="boxes">
    <div class="create">
+   <a href="https://catalyze.pythonanywhere.com/admin">
       <div class="box">
            <h3>CREATE AN EVENT</h3>
       </div>
+   </a>
+   <a href="https://catalyze.pythonanywhere.com">
    <div class="box">
            <h3>FIND EVENTS</h3>
       </div>
+   </a>
+ <a href="https://facebook.com">
  <div class="box">
            <h3>WHAT ELSE CAN I DO?</h3>
       </div>
+ </a>
    </div>
 </section>
 
