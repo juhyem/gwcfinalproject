@@ -35,10 +35,10 @@ class Event(models.Model):
     cause = models.CharField(max_length=200)
     # location
     street_address = models.CharField(max_length=150)
-    name_of_place_opt = models.CharField(max_length=150)
+    name_of_place = models.CharField(max_length=150)
     # time
-    start_time = models.DateTimeField()
-    end_time = models.DateTimeField()
+    start_date_and_time = models.DateTimeField()
+    end_date_and_time = models.DateTimeField()
     description = models.TextField()
     published_date = models.DateTimeField(
             blank=True, null=True)
