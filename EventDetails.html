@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Model Event Page</title>
+    <link rel="stylesheet" href="EventDetails.css">
+  </head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="better_eventpage.html">EVENT</a>
+    <a href="#about">RESERVE SPOTS</a>
+    <a href="#contact">CONTACT</a>
+    <a href="#home" style = "float: right;">Catalyze</a>
+  </div>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+    <button class="tablinks" onclick="openTab(event, 'Location')">Location</button>
+    <button class="tablinks" onclick="openTab(event, 'Schedule')">Schedule</button>
+  </div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Write information about the event here. Write abou the cause that you are supporting and the purpose of the event.</p>
+</div>
+
+<div id="Location" class="tabcontent">
+  <h3>Location</h3>
+  <p>Provide the contact information and venue information to help your attendees.</p>
+</div>
+
+<div id="Schedule" class="tabcontent">
+  <h3>Schedule</h3>
+  <p>Give the general breakdown of the events that will happen during the day.</p>
+</div>
+
+<script>
+function openTab(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
