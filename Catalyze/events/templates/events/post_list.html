@@ -8,8 +8,9 @@
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <h2>Cause/purpose: {{ post.cause }}</h2>
             <h3>Created by {{ post.first_name|linebreaksbr }}</h3>
-            <p>Where? {{ post.name_of_place_opt }}</p>
-            <p>   {{ post.street_address }}</p>
+            <p>Where?</p>
+            <p>{{ post.name_of_place_opt }}</p>
+            <p>{{ post.street_address }}</p>
             <p>When? {{ post.date_of_event }}</p>
             <p>{{ post.start_time }} to {{ post.end_time }}</p>
 
