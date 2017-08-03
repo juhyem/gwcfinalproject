@@ -1,0 +1,24 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <h2>Cause/purpose: {{ post.cause }}</h2>
+        <h3>Created by {{ post.first_name|linebreaksbr }}</h3>
+        <p>Where? {{ post.name_of_place_opt }}</p>
+        <p>   {{ post.street_address }}</p>
+        <p>When? {{ post.start_time }} to {{ post.end_time }}</p>
+
+        <p>About</p>
+        <p>{{ post.description|linebreaksbr }}</p>
+
+        <p>Contact</p>
+        <p>email: {{ post.email }}</p>
+        <p>phone: {{ post.phone }}</p>
+    </div>
+{% endblock %}
