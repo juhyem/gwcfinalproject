@@ -6,7 +6,7 @@ class EventForm(forms.ModelForm):
 
     class Meta:
         model = Event
-        fields = ('title', 'cause', 'street_address', 'name_of_place', 'start_date_and_time', 'first_name', 'last_name', 'email', 'phone', 'description')
+        fields = ('title', 'cause', 'street_address', 'name_of_place', 'start_date_and_time', 'end_date_and_time', 'first_name', 'last_name', 'email', 'phone', 'description')
 
 
     # start_time = forms.TimeField(widget = AdminTimeWidget)
