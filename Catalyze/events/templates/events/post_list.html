@@ -6,7 +6,18 @@
                 {{ post.published_date }}
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+            <h2>Cause/purpose: {{ post.cause }}</h2>
+            <h3>Created by {{ post.first_name|linebreaksbr }}</h3>
+            <p>Where? {{ post.name_of_place_opt }}</p>
+            <p>   {{ post.street_address }}</p>
+            <p>When? {{ post.start_time }} to {{ post.end_time }}</p>
+
+            <p>About</p>
+            <p>{{ post.description|linebreaksbr }}</p>
+
+            <p>Contact</p>
+            <p>email: {{ post.email }}</p>
+            <p>phone: {{ post.phone }}</p>
         </div>
     {% endfor %}
 {% endblock %}
