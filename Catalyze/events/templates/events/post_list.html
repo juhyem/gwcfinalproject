@@ -10,7 +10,8 @@
             <h3>Created by {{ post.first_name|linebreaksbr }}</h3>
             <p>Where? {{ post.name_of_place_opt }}</p>
             <p>   {{ post.street_address }}</p>
-            <p>When? {{ post.start_time }} to {{ post.end_time }}</p>
+            <p>When? {{ post.date_of_event }}</p>
+            <p>{{ post.start_time }} to {{ post.end_time }}</p>
 
             <p>About</p>
             <p>{{ post.description|linebreaksbr }}</p>
