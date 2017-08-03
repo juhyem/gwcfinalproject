@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
   <link rel="stylesheet" href="indexstyle.css">
   <link rel="icon" href="http://www.clker.com/cliparts/b/9/N/e/f/M/lightning-bolt.svg">
@@ -11,6 +13,8 @@
 
 
   </style>
+
+
 </head>
 <body>
   <header>
@@ -63,15 +67,15 @@ window.onclick = function(event) {
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
-<div id="id01" class="modal">
+<div id="id01" class="lmodal">
 
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
+  <form class="lmodal-content animate" action="/action_page.php">
+    <div class="limgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div>
 
-    <div class="container">
+    <div class="lcontainer">
       <label><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -82,9 +86,9 @@ window.onclick = function(event) {
       <input type="checkbox" checked="checked"> Remember me
     </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+    <div class="lcontainer" style="background-color:#f1f1f1">
+      <button type="lbutton" onclick="document.getElementById('id01').style.display='none'" class="lcancelbtn">Cancel</button>
+      <span class="lpsw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
 </div>
@@ -106,8 +110,8 @@ window.onclick = function(event) {
 <ul>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <li class="current"><a href="index.html">Home</a></li>
-  <li><a href="https://catalyze.pythonanywhere.com">Create Event</a></li>
-  <li><a href="events.html">Find Event</a></li>
+  <li><a href="https://catalyze.pythonanywhere.com/admin">Create Event</a></li>
+  <li><a href="https://catalyze.pythonanywhere.com">Find Event</a></li>
   <li><a href="other.html">What else?</a></li>
 </ul>
 </div>
@@ -129,12 +133,42 @@ function closeNav() {
 </script>
    </header>
 
-  <section id="showcase">
-    <div class="container">
+<!--showcase-->
+
+  <div id="slideshow">
+      <div style="background: url('http://i.imgur.com/o2XVmbT.jpg') no-repeat 0 -400px; background-size: cover;">
       <h1>CATALYZE</h1>
       <p>This is our motto. Be inspired.</p>
-    </div>
- </section>
+      </div>
+   
+   
+      <div style="background: url('http://i.imgur.com/MQErreN.jpg') no-repeat 0 -100px; background-size: cover;">
+      <h1>CATALYZE</h1>
+      <p>This is our motto. Be inspired.</p>
+      </div>
+    
+    
+      <div style="background: url('http://i.imgur.com/JU4zqSM.jpg') no-repeat 0 -250px; background-size: cover;">
+      <h1>CATALYZE</h1>
+      <p>This is our motto. Be inspired.</p>
+      </div>
+    
+ </div>
+
+<script>
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  4000);
+</script>
+
+
 
  <section id="boxes">
    <div class="create">
