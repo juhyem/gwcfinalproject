@@ -111,24 +111,35 @@ button:hover, a:hover {
 <div class="row">
   <div class="column">
     <div class="card">
+      <div class="post"
       <img src="http://i.imgur.com/kYJz6hS.jpg" alt="Love" style="width:100%">
       <div class="container">
-        <h1>Love Rally</h1>
-        <p class="title">Aug 4, 2017</p>
-        <p>GE Grace Hopper Classroom</p>
+        <div class="date">
+                {{ post.published_date }}
+        </div>
+        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+        <h2>Cause/purpose: {{ post.cause }}</h2>
+        <p class="title">{{ post.start_time }} to {{ post.end_time }}</p>
+        <p>{{ post.name_of_place_opt }}</p>
+        <p>   {{ post.street_address }}</p>
         <div style="margin: 24px 0;">
           <a href="#"><i class="fa fa-bookmark-o"></i></a>
           <a href="#"><i class="fa fa-calendar-check-o"></i></a>
           <a href="#"><i class="fa fa-share"></i></a>
           <a href="#"><i class="fa fa-facebook"></i></a>
         </div>
+        <p>About</p>
+            <p>{{ post.description|linebreaksbr }}</p>
         <p><button>Going</button></p>
         <p><button>Interested</button></p>
+        <h3>Created by {{ post.first_name|linebreaksbr }}</h3>
+        <p>Contact</p>
+            <p>email: {{ post.email }}</p>
+            <p>phone: {{ post.phone }}</p>
+      </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
   <div class="column">
     <div class="card">
       <img src="http://i.imgur.com/zwIjnlk.jpg" alt="Jane" style="width:100%">
@@ -148,7 +159,6 @@ button:hover, a:hover {
     </div>
   </div>
 
-  <div class="row">
   <div class="column">
     <div class="card">
       <img src="http://i.imgur.com/kYJz6hS.jpg" alt="Pride" style="width:100%">
@@ -168,7 +178,6 @@ button:hover, a:hover {
     </div>
   </div>
 
-<div class="row">
   <div class="column">
     <div class="card">
       <img src="http://i.imgur.com/MQErreN.jpg" alt="Jiggle" style="width:100%">
@@ -188,7 +197,6 @@ button:hover, a:hover {
     </div>
   </div>
 
-  <div class="row">
   <div class="column">
     <div class="card">
       <img src="http://i.imgur.com/kYJz6hS.jpg" alt="Jane" style="width:100%">
@@ -208,7 +216,6 @@ button:hover, a:hover {
     </div>
   </div>
 
-  <div class="row">
   <div class="column">
     <div class="card">
       <img src="http://i.imgur.com/JU4zqSM.jpg" alt="Socks" style="width:100%">
@@ -228,7 +235,6 @@ button:hover, a:hover {
     </div>
   </div>
 
-  <div class="row">
   <div class="column">
     <div class="card">
       <img src="http://i.imgur.com/WBQ3DSP.jpg" alt="Robot" style="width:100%">
@@ -248,7 +254,6 @@ button:hover, a:hover {
     </div>
   </div>
 
-  <div class="row">
   <div class="column">
     <div class="card">
       <img src="http://i.imgur.com/o2XVmbT.jpg" alt="Confetti" style="width:100%">
@@ -268,7 +273,6 @@ button:hover, a:hover {
     </div>
   </div>
 
-  <div class="row">
   <div class="column">
     <div class="card">
       <img src="http://i.imgur.com/mWYhPEa.jpg" alt="Concert" style="width:100%">
@@ -287,3 +291,4 @@ button:hover, a:hover {
       </div>
     </div>
   </div>
+</div>
