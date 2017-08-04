@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.admin.widgets import AdminTimeWidget, AdminDateWidget
+# from django.contrib.admin.widgets import AdminTimeWidget, AdminDateWidget
 from .models import Event
 
 class EventForm(forms.ModelForm):
