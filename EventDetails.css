@@ -62,7 +62,25 @@ div.tab button.active {
     border: 1px solid #ccc;
     border-top: none;
 }
-.tabcontent h3{
+.tabcontent h3 {
   font-family: Monospace;
   font-size: 50px;
+  color: #00CED1;
+  /*float: left;*/
 }
+.tabcontent p {
+  font-family: Monospace;
+  font-size: 20px;
+  float: left;
+}
+
+#About .col
+{
+  margin-right: 100px;
+  margin-left: 100px;
+
+}
+/*img{
+    width: 50%;
+    float:right;
+}*/
