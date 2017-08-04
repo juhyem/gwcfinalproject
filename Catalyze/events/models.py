@@ -42,7 +42,7 @@ class Event(models.Model):
     description = models.TextField()
     published_date = models.DateTimeField(
             blank=True, null=True)
-
+    # image = models.ImageField(upload_to=
     def publish(self):
         self.published_date = timezone.now()
         self.save()
