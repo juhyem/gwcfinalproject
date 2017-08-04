@@ -4,7 +4,7 @@ from .models import Event
 from django.shortcuts import render, get_object_or_404
 from .forms import EventForm
 from django.shortcuts import redirect
-
+#
 # Create your views here.
 def post_list(request):
     posts = Event.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -13,7 +13,7 @@ def post_list(request):
 def post_detail(request, pk):
     post = get_object_or_404(Event, pk=pk)
     return render(request, 'events/post_detail.html', {'post': post})
-
+#
 def post_new(request):
     if request.method == "POST":
         form = EventForm(request.POST)
@@ -26,7 +26,7 @@ def post_new(request):
     else:
         form = EventForm()
     return render(request, 'events/post_edit.html', {'form': form})
-
+#
 def post_edit(request, pk):
     post = get_object_or_404(Event, pk=pk)
     if request.method == "POST":
