@@ -42,6 +42,9 @@ class Event(models.Model):
     cause = models.CharField(max_length=200)
     # location
     street_address = models.CharField(max_length=150)
+    city = models.CharField(max_length=150, null=True)
+    state = models.CharField(max_length=20, null=True)
+    zip_code = models.CharField(max_length=6, null=True)
     name_of_place = models.CharField(max_length=150)
     # time
     start_date_and_time = models.DateTimeField()
