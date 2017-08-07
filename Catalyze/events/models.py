@@ -22,6 +22,9 @@ from django.db import models
 
 from django.db import models
 from django.utils import timezone
+from django.core.files.storage import FileSystemStorage
+
+upload_location = FileSystemStorage(location='/home/pi/djcode/xpcpro/xpcpro/images')
 
 
 class Event(models.Model):
@@ -42,7 +45,12 @@ class Event(models.Model):
     description = models.TextField()
     published_date = models.DateTimeField(
             blank=True, null=True)
-    # image = models.ImageField(upload_to=
+    image = models.ImageField(
+        storage=upload_location, null=True,
+        blank=True, width_field="width_field",
+        height_field="height_field",)
+    height_field = models.IntegerField(default=0)
+    width_field = models.IntegerField(default=0)
     def publish(self):
         self.published_date = timezone.now()
         self.save()
