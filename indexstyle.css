@@ -298,6 +298,7 @@ span.psw {
  /* max-height: 300px;
   object-fit: cover;
   overflow: hidden;*/
+  
 }
 
 /*#slideshow h1{
@@ -309,13 +310,13 @@ span.psw {
   font-family:bromello;*/
 }
 
-#slideshow p{
-  font-size:20px;
+#slideshow h2{
+  font-size:40px;
   color:#fff;
-  /*position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;  
-  transform: translate(-50%, -50%);*/
+  transform: translate(-50%, -50%);
 }
 
 #slideshow img{
