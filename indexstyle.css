@@ -313,10 +313,10 @@ span.psw {
 #slideshow h2{
   font-size:40px;
   color:#fff;
-  position: absolute;
+  /*position: absolute;
   top: 50%;
   left: 50%;  
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
 }
 
 #slideshow img{
