@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Model Event Page</title>
+    <link rel="stylesheet" href="EventDetails.css">
+  </head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="better_eventpage.html">EVENT</a>
+    <a href="#about">RESERVE SPOTS</a>
+    <a href="#contact">CONTACT</a>
+    <a href="#home" style = "float: right;">Catalyze</a>
+  </div>
+  <h2>Sample Event<h2>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'About')"><img src = http://i.imgur.com/icRVUKL.png/><br>ABOUT</button>
+    <button class="tablinks" onclick="openTab(event, 'Location')"><img src = http://i.imgur.com/4e1bjDk.png/><br>LOCATION</button>
+    <button class="tablinks" onclick="openTab(event, 'Schedule')"><img src = http://i.imgur.com/jihVIOq.png/><br>SCHEDULE</button>
+    <button class="tablinks" onclick="openTab(event, 'Gallery')"><img src = http://i.imgur.com/jihVIOq.png/><br>GALLERY</button>
+  </div>
+
+<div id="About" class="tabcontent">
+  <!-- <table style="width:100%"> -->
+  <div class="col">
+    <h3>ABOUT</h3>
+    <p>Write information about the event here. Write about the cause that you are supporting and the purpose of the event.</p>
+  </div>
+  <div class="col2">
+    <img src = "http://i.imgur.com/y3roHqz.jpg"/>
+  </div>
+</div>
+
+<div id="Location" class="tabcontent">
+  <table style="width:100%">
+<tr>
+  <td>
+    <h3>LOCATION</h3>
+  </td>
+  <div class = "contact_info">
+    <td>
+      <p>
+        <b>
+        <br><br><img src = "http://i.imgur.com/ksZDbx3.png"/>ADDRESS:<br>
+        <br><img src = "http://i.imgur.com/oV4euEU.png"/>PHONE:<br>
+        <br><img src = "http://i.imgur.com/QFNvL4l.png"/>EMAIL:<br>
+      </p>
+    </td>
+  </div>
+</tr>
+</table>
+<div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4o0aKMldRr08Dn2giSnNFxMEDwsFh354&callback=initMap">
+    </script>
+</div>
+
+<div id="Schedule" class="tabcontent">
+  <h3>SCHEDULE</h3>
+  <p>Give the general breakdown of the events that will happen during the day.</p>
+</div>
+
+<script>
+function openTab(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
