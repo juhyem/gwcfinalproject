@@ -62,7 +62,8 @@ class Event(models.Model):
     image = models.FileField(
         upload_to=upload_location,
         null=True,
-        blank=True,)
+        blank=True,
+        default = 'catalyzeLogo.png')
         # width_field="width_field",
         # height_field="height_field")
 
