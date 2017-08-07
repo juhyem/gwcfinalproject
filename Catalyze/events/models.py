@@ -50,7 +50,7 @@ class Event(models.Model):
     published_date = models.DateTimeField(
             blank=True, null=True)
 
-    
+
 
     # image = models.ImageField(
     #     storage=upload_location, null=True,
