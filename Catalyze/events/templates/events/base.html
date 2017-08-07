@@ -117,7 +117,7 @@
             opacity: 0.7;
         }
 
-        .page-header span{
+        #main span{
           float:right;
           margin:10px;
           padding: 10px;
@@ -152,12 +152,17 @@
 
 <div id="main">
   
+
+  <span style="font-size:30px;cursor:pointer; float:left;" onclick="openNav()">&#9776;</span>
+
+  <a href="{% url 'post_new' %}" class="top-menu"><span class="fa fa-plus"></span></a>
+
   <img src="http://i.imgur.com/l8dsevv.png" style="max-width:20%;
   max-height: 20%;
   display: block;
   margin: auto;">
 
-  <span style="font-size:30px;cursor:pointer; float:left;" onclick="openNav()">&#9776;</span>
+  
 
 </div>
 
@@ -179,8 +184,6 @@ function closeNav() {
 
       <div class="page-header">
           
-
-          <a href="{% url 'post_new' %}" class="top-menu"><span class="fa fa-plus"></span></a>
           <h1><a href="/post/">Events</a></h1>
 
       </div>

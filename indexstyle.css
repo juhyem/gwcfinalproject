@@ -274,12 +274,13 @@ span.psw {
 
 /* Showcase */
 #slideshow{
-  min-height: 300px;
+  max-height: 20%;
   /*background:url('http://volteface.me/app/uploads/2017/02/Closeup_of_protesters_at_Ginowan_protests_2009-11-08.jpg') no-repeat; */
  /* background: url('http://i.imgur.com/o2XVmbT.jpg') no-repeat 0 -300px;
   background-size: cover; */
-  text-align:center;
+  /*text-align:center;
   color:#fff;
+  overflow: hidden;*/
   
 
 
@@ -294,15 +295,18 @@ span.psw {
   right: 10px;
   bottom: 300px;*/
   /*display: inline-block;*/
+ /* max-height: 300px;
+  object-fit: cover;
+  overflow: hidden;*/
 }
 
-#slideshow h1{
+/*#slideshow h1{
   margin-top:5px;
   padding-top: 50px;
   font-size:55px;
   margin-bottom:10px;
   color:#fff;
-  font-family:bromello;
+  font-family:bromello;*/
 }
 
 #slideshow p{
@@ -315,7 +319,7 @@ span.psw {
 }
 
 #slideshow img{
-  
+
 }
 
 
