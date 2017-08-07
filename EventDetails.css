@@ -12,7 +12,7 @@
     padding: 40px 30px;
     text-decoration: none;
     font-size: 30px;
-    font-family: Monospace;
+    font-family: "Trebuchet MS", sans-serif	;
 }
 
 /* Change the color of links on hover */
@@ -30,8 +30,10 @@
 /* Style the tab */
 div.tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+
+    /*border: 1px solid #ccc;*/
+    /*background-color: #f1f1f1;*/
+    padding-left: 200px;
 }
 
 /* Style the buttons inside the tab */
@@ -43,6 +45,15 @@ div.tab button {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    font-family: "Trebuchet MS", sans-serif	;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+div.tab button img{
+  height: 20px;
 }
 
 /* Change background color of buttons on hover */
@@ -61,12 +72,12 @@ div.tab button.active {
     border-top: none;
 }
 .tabcontent h3 {
-  font-family: Monospace;
+  font-family: "Trebuchet MS", sans-serif	;
   font-size: 75px;
   color: #00CED1;
 }
 .tabcontent p {
-  font-family: Monospace;
+  font-family: "Trebuchet MS", sans-serif	;
   font-size: 20px;
   float: left;
 }
@@ -89,4 +100,13 @@ h3{
 .contact_info p{
    /*padding-right: 300px;*/
    display: inline-block;
+}
+
+#Location img{
+  height: 15px;
+}
+#map {
+    height: 400px;
+    width: 100%;
+    background-color: grey;
 }

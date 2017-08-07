@@ -11,10 +11,12 @@
     <a href="#contact">CONTACT</a>
     <a href="#home" style = "float: right;">Catalyze</a>
   </div>
+  <h2>Sample Event<h2>
   <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'About')">About</button>
-    <button class="tablinks" onclick="openTab(event, 'Location')">Location</button>
-    <button class="tablinks" onclick="openTab(event, 'Schedule')">Schedule</button>
+    <button class="tablinks" onclick="openTab(event, 'About')"><img src = http://i.imgur.com/icRVUKL.png/><br>ABOUT</button>
+    <button class="tablinks" onclick="openTab(event, 'Location')"><img src = http://i.imgur.com/4e1bjDk.png/><br>LOCATION</button>
+    <button class="tablinks" onclick="openTab(event, 'Schedule')"><img src = http://i.imgur.com/jihVIOq.png/><br>SCHEDULE</button>
+    <button class="tablinks" onclick="openTab(event, 'Gallery')"><img src = http://i.imgur.com/jihVIOq.png/><br>GALLERY</button>
   </div>
 
 <div id="About" class="tabcontent">
@@ -37,19 +39,36 @@
   <div class = "contact_info">
     <td>
       <p>
-        ADDRESS:<br>
-        <br>PHONE:<br>
-        <br>EMAIL:<br>
+        <b>
+        <br><br><img src = "http://i.imgur.com/ksZDbx3.png"/>ADDRESS:<br>
+        <br><img src = "http://i.imgur.com/oV4euEU.png"/>PHONE:<br>
+        <br><img src = "http://i.imgur.com/QFNvL4l.png"/>EMAIL:<br>
       </p>
     </td>
   </div>
 </tr>
 </table>
-
+<div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4o0aKMldRr08Dn2giSnNFxMEDwsFh354&callback=initMap">
+    </script>
 </div>
 
 <div id="Schedule" class="tabcontent">
-  <h3>Schedule</h3>
+  <h3>SCHEDULE</h3>
   <p>Give the general breakdown of the events that will happen during the day.</p>
 </div>
 
