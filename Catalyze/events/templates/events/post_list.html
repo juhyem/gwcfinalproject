@@ -3,9 +3,18 @@
     {% for post in posts %}
     <!-- <div class="row">
 <div class="column"> -->
+<!-- <table>
+  <tr>
+    <td> -->
 <div class="card">
   <div class="post">
-  <img src="http://i.imgur.com/kYJz6hS.jpg" alt="Love" style="width:100%">
+  <!-- <img src="http://i.imgur.com/kYJz6hS.jpg" alt="Love" style="width:100%"> -->
+  <!-- <label for="id_image"> -->  
+ {% if obj.image %} 
+  <img src="{{ event.obj.image.url }}" 
+    title="{{ p.title }}" alt="Love" style="width: 100%"> 
+ {% endif %}
+    <!-- </label> -->
   <div class="container">
     <div class="date">
             {{ post.published_date }}
@@ -34,5 +43,9 @@
 </div>
 </div>
         </div>
+        
+    <!-- </td>
+  </tr>
+</table> -->
     {% endfor %}
 {% endblock %}

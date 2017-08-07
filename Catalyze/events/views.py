@@ -20,7 +20,7 @@ def post_detail(request, pk):
 #
 def post_new(request):
     if request.method == "POST":
-        form = EventForm(request.POST)
+        form = EventForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             # post.author = request.user
@@ -34,7 +34,7 @@ def post_new(request):
 def post_edit(request, pk):
     post = get_object_or_404(Event, pk=pk)
     if request.method == "POST":
-        form = EventForm(request.POST, instance=post)
+        form = EventForm(request.POST, request.FILE or none)
         if form.is_valid():
             post = form.save(commit=False)
             # post.author = request.user
@@ -44,3 +44,5 @@ def post_edit(request, pk):
     else:
         form = EventForm(instance=post)
     return render(request, 'events/post_edit.html', {'form': form})
+
+
