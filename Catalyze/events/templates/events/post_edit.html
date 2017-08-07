@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>New event</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
+    <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
         {{ form.as_p }}
         <p>*Please input 'start time' and 'end time' as MM/DD/YY 00:00</p>
         <button type="submit" class="save btn btn-default">Post event</button>
