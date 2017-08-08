@@ -1,19 +1,24 @@
 {% extends 'events/base.html' %}
 {% load staticfiles %}
 {% block content %}
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter a zip code...">
     {% for post in posts %}
     <!-- <div class="row">
 <div class="column"> -->
 <!-- <table>
   <tr>
     <td> -->
+
 <div class="card">
   <div class="post">
   <!-- <img src="http://i.imgur.com/kYJz6hS.jpg" alt="Love" style="width:100%"> -->
   <!-- <label for="id_image"> -->
  <!-- {% if post.image %} -->
-  <img src="{{ post.image.url }}"
-    title="{{ p.title }}" alt="Love" style="width: 100%">
+  <div>
+    <img src="{{ post.image.url }}"
+    title="{{ p.title }}" alt="Love"
+    style="width: 100%">
+  </div>
  <!-- {% endif %} -->
     <!-- </label> -->
   <div class="container">

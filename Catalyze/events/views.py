@@ -11,12 +11,16 @@ def index(request):
     return render(request, 'events/index.html', {})
 
 def post_list(request):
-    posts = Event.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Event.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'events/post_list.html', {'posts' : posts})
 
 def post_detail(request, pk):
     post = get_object_or_404(Event, pk=pk)
     return render(request, 'events/post_detail.html', {'post': post})
+
+def post_detail_detail(request, pk):
+    post = get_object_or_404(Event, pk=pk)
+    return render(request, 'events/post_detail_detail.html', {'post': post})
 #
 def post_new(request):
     if request.method == "POST":
@@ -44,5 +48,3 @@ def post_edit(request, pk):
     else:
         form = EventForm(instance=post)
     return render(request, 'events/post_edit.html', {'form': form})
-
-
