@@ -5,45 +5,46 @@
     <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
     <p><i>All fields are required.</p></i>
         <!-- {{ form.as_p }} -->
-<form action="" method="post">
-    <ul class="editpost">
-        <p><b>Event Overview</p></b>
-        <p>Title:</p>
-        <li id="title" class="postz">{{ form.title }}</li>
-        <p>Cause/purpose:</p>
-        <li id="cause" class="postz">{{ form.cause }}</li>
-        <p>Description:</p>
-        <li id="description" class="postz">{{ form.description }}</li>
-        <p>Upload an image:</p>
-        <li id="image" class="postz">{{ form.image }}</li>
-        <p><b>Location and date of event</p></b>
-        <p>Street address:</p>
-        <li id="street_address" class="postz">{{ form.street_address }}</li>
-        <p>City:</p>
-        <li id="city" class="postz">{{ form.city }}</li>
-        <p>State:</p>
-        <li id="state" class="postz">{{ form.state }}</li>
-        <p>Zip code:</p>
-        <li id="zip_code" class="postz">{{ form.zip_code }}</li>
-        <p>Name of place:</p>
-        <li id="name_of_place" class="postz">{{ form.name_of_place }}</li>
-        <p>Start date and time:</p>
-        <li id="start_date_and_time" class="postz">{{ form.start_date_and_time }}</li>
-        <p>End date and time:</p>
-        <li id="end_date_and_time" class="postz">{{ form.end_date_and_time }}</li>
-        <p>*Please input 'Start date and time' and 'End date and time' as MM/DD/YY 00:00*</p>
-        <p><b>Your info</p></b>
-        <p>First name:</p>
-        <li id="first_name" class="postz">{{ form.first_name }}</li>
-        <p>Last name:</p>
-        <li id="last_name" class="postz">{{ form.last_name }}</li>
-        <p>Email:</p>
-        <li id="email" class="postz">{{ form.email }}</li>
-        <p>Phone number:</p>
-        <li id="phone" class="postz">{{ form.phone }}</li>
+    <form action="" method="post">
+        <ul class="editpost">
+            <p><b>Event Overview</p></b>
+            <p>Title:</p>
+            <li id="title" class="postz">{{ form.title }}</li>
+            <p>Cause/purpose:</p>
+            <li id="cause" class="postz">{{ form.cause }}</li>
+            <p>Description:</p>
+            <li id="description" class="postz">{{ form.description }}</li>
+            <p>Upload an image:</p>
+            <li id="image" class="postz">{{ form.image }}</li>
+            <p><b>Location and date of event</p></b>
+            <p>Street address:</p>
+            <li id="street_address" class="postz">{{ form.street_address }}</li>
+            <p>City:</p>
+            <li id="city" class="postz">{{ form.city }}</li>
+            <p>State:</p>
+            <li id="state" class="postz">{{ form.state }}</li>
+            <p>Zip code:</p>
+            <li id="zip_code" class="postz">{{ form.zip_code }}</li>
+            <p>Name of place:</p>
+            <li id="name_of_place" class="postz">{{ form.name_of_place }}</li>
+            <p>Start date and time:</p>
+            <li id="start_date_and_time" class="postz">{{ form.start_date_and_time }}</li>
+            <p>End date and time:</p>
+            <li id="end_date_and_time" class="postz">{{ form.end_date_and_time }}</li>
+            <p>*Please input 'Start date and time' and 'End date and time' as MM/DD/YY 00:00*</p>
+            <p><b>Your info</p></b>
+            <p>First name:</p>
+            <li id="first_name" class="postz">{{ form.first_name }}</li>
+            <p>Last name:</p>
+            <li id="last_name" class="postz">{{ form.last_name }}</li>
+            <p>Email:</p>
+            <li id="email" class="postz">{{ form.email }}</li>
+            <p>Phone number:</p>
+            <li id="phone" class="postz">{{ form.phone }}</li>
 
-    </ul>
-</form>
-        <button type="submit" class="save btn btn-default">Post event</button>
+        </ul>
+      <button type="submit" class="save btn btn-default">Post event</button>
     </form>
+          <!-- <button type="submit" class="save btn btn-default">Post event</button> -->
+      <!-- </form> -->
 {% endblock %}
