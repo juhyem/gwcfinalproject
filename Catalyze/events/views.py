@@ -10,6 +10,9 @@ from django.shortcuts import redirect
 def index(request):
     return render(request, 'events/index.html', {})
 
+def rights(request):
+    return render(request, 'events/knowyourights.html', {})
+
 def post_list(request):
     posts = Event.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'events/post_list.html', {'posts' : posts})
