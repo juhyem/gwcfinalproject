@@ -13,14 +13,14 @@
     padding: 40px 30px;
     text-decoration: none;
     font-size: 20px;
-    font-family: Monospace;
+    font-family: "Trebuchet MS", sans-serif	;
     /*min-height: 200%;*/
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #63b5cf;
+    color: white;
 }
 
 /* Add a color to the active/current link */
@@ -47,7 +47,49 @@ tr {
   color: #fff;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
   position: absolute;
-  top: 200px;
+  top: 500px;
   text-align:center;
   width: 100%;
+}
+
+body{
+	text-align: center;
+  	/*background: #00ECB9;*/
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+/*h1{
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}*/
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #00BF96;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #00816A;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
 }

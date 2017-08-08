@@ -1,5 +1,9 @@
 {% extends 'events/base.html' %}
+{% load staticfiles %}
 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/new_eventpage.css' %}">
+{% endblock %}
 {% block content %}
 
 <!-- <!DOCTYPE html>
@@ -51,7 +55,6 @@
         "seconds": seconds
       };
     }, 1000); -->
-    <h1>Countdown Clock</h1>
 <div id="clockdiv">
   <div>
     <span class="days"></span>
