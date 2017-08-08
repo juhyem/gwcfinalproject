@@ -18,10 +18,10 @@ def post_detail(request, pk):
     post = get_object_or_404(Event, pk=pk)
     return render(request, 'events/post_detail.html', {'post': post})
 
-def post_detail_detail(request, pk):
-    post = get_object_or_404(Event, pk=pk)
-    return render(request, 'events/post_detail_detail.html', {'post': post})
-#
+# def post_detail_detail(request, pk):
+#     post = get_object_or_404(Event, pk=pk)
+#     return render(request, 'events/post_detail_detail.html', {'post': post})
+# #
 def post_new(request):
     if request.method == "POST":
         form = EventForm(request.POST, request.FILES)
