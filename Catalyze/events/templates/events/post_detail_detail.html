@@ -10,12 +10,12 @@
   </head>
 <body> -->
   <div class="topnav" id="myTopnav">
-    <a href="better_eventpage.html">EVENT</a>
+    <a href="{% url 'post_detail' pk=post.pk %}">EVENT</a>
     <a href="#about">RESERVE SPOTS</a>
     <a href="#contact">CONTACT</a>
     <a href="#home" style = "float: right;">Catalyze</a>
   </div>
-  <h2>Sample Event<h2>
+  <h2>{{ post.title }}<h2>
   <div class="tab">
     <button class="tablinks" onclick="openTab(event, 'About')"><img src = http://i.imgur.com/icRVUKL.png/><br>ABOUT</button>
     <button class="tablinks" onclick="openTab(event, 'Location')"><img src = http://i.imgur.com/4e1bjDk.png/><br>LOCATION</button>
@@ -27,7 +27,8 @@
   <!-- <table style="width:100%"> -->
   <div class="col">
     <h3>ABOUT</h3>
-    <p>Write information about the event here. Write about the cause that you are supporting and the purpose of the event.</p>
+    <p>Cause/purpose: {{ post.cause }}</p>
+    <p>{{ post.description|linebreaksbr }}</p>
   </div>
   <div class="col2">
     <img src = "http://i.imgur.com/y3roHqz.jpg"/>
@@ -44,9 +45,11 @@
     <td>
       <p>
         <b>
-        <br><br><img src = "http://i.imgur.com/ksZDbx3.png"/>ADDRESS:<br>
-        <br><img src = "http://i.imgur.com/oV4euEU.png"/>PHONE:<br>
-        <br><img src = "http://i.imgur.com/QFNvL4l.png"/>EMAIL:<br>
+        <br><br><img src = "http://i.imgur.com/ksZDbx3.png"/>ADDRESS: <p>{{ post.name_of_place }}</p>
+        <p>{{ post.street_address }}</p>
+        <p>{{ post.city }}, {{ post.state }} {{ post.zip_code }}</p>  <br>
+        <br><img src = "http://i.imgur.com/oV4euEU.png"/>PHONE: {{ post.phone }}<br>
+        <br><img src = "http://i.imgur.com/QFNvL4l.png"/>EMAIL: {{ post.email }}<br>
       </p>
     </td>
   </div>
@@ -73,6 +76,7 @@
 
 <div id="Schedule" class="tabcontent">
   <h3>SCHEDULE</h3>
+  <p>{{ post.start_date_and_time }} to {{ post.end_date_and_time }}</p>
   <p>Give the general breakdown of the events that will happen during the day.</p>
 </div>
 
