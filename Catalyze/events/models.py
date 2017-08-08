@@ -47,8 +47,8 @@ class Event(models.Model):
     zip_code = models.CharField(max_length=6, null=True)
     name_of_place = models.CharField(max_length=150)
     # time
-    start_date_and_time = models.DateTimeField()
-    end_date_and_time = models.DateTimeField()
+    start_date_and_time = models.CharField(max_length=50)
+    end_date_and_time = models.CharField(max_length=50)
     description = models.TextField()
     published_date = models.DateTimeField(
             blank=True, null=True)

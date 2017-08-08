@@ -13,7 +13,7 @@
     <a href="{% url 'post_detail' pk=post.pk %}">EVENT</a>
     <a href="#about">RESERVE SPOTS</a>
     <a href="#contact">CONTACT</a>
-    <a href="https://catalyze.pythonanywhere.com" style = "float: right;">Catalyze</a>
+    <a href="{% url 'index' %}" style = "float: right;">Catalyze</a>
   </div>
   <h2>{{ post.title }}<h2>
   <div class="tab">
