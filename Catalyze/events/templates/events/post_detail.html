@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title>Model Event Page</title>
     <link rel="stylesheet" href="new_eventpage.css">
   </head>
-<body>
+<body> -->
       <div class="topnav" id="myTopnav">
       <a href="{% url 'post_detail_detail' pk=post.pk %}">EVENT DETAILS</a>
       <a href="#about">RESERVE SPOTS</a>
@@ -128,4 +132,6 @@ initializeClock('clockdiv', countDownDate);
     </div>
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
     <!-- Display the countdown timer in an element -->
-</html>
+<!-- </html> -->
+
+{% endblock %}
