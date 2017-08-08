@@ -31,7 +31,7 @@
     <p>{{ post.description|linebreaksbr }}</p>
   </div>
   <div class="col2">
-    <img src = "http://i.imgur.com/y3roHqz.jpg"/>
+    <img src = "{{ post.image.url }}"/>
   </div>
 </div>
 
@@ -95,7 +95,7 @@ function openTab(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 </script>
-<!-- 
+<!--
 </body>
 </html> -->
 
