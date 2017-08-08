@@ -5,8 +5,8 @@ from django.forms import DateTimeField
 
 class EventForm(forms.ModelForm):
 
-    # start_date_and_time = DateTimeField(input_formats=["%d %b %Y %H:%M:%S %Z"])
-    # end_date_and_time = DateTimeField(input_formats=["%d %b %Y %H:%M:%S %Z"])
+    # start_date_and_time = DateTimeField(input_formats=["%m/%d/%y %H:%M'"])
+    # end_date_and_time = DateTimeField(input_formats=["%m/%d/%y %H:%M'"])
     class Meta:
         model = Event
         fields = ('title', 'cause', 'street_address', 'city', 'state', 'zip_code', 'name_of_place', 'start_date_and_time', 'end_date_and_time', 'first_name', 'last_name', 'email', 'phone', 'description', 'image')
