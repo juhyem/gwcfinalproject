@@ -147,10 +147,10 @@
          <div id="mySidenav" class="sidenav">
 <ul>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <li><a href="https://catalyze.pythonanywhere.com">Home</a></li>
-  <li><a href="https://catalyze.pythonanywhere.com/post/new">Create Event</a></li>
-  <li class="current"><a href="https://catalyze.pythonanywhere.com/post">Find Event</a></li>
-  <li><a href="other.html">What else?</a></li>
+  <li><a href="{% url 'index' %}">Home</a></li>
+  <li><a href="{% url 'post_new' %}">Create Event</a></li>
+  <li class="current"><a href="{% url 'post_list' %}">Find Event</a></li>
+  <li><a href="{% url 'rights' %}">What else?</a></li>
 </ul>
 </div>
 
@@ -161,7 +161,7 @@
 
   <a href="{% url 'post_new' %}" class="top-menu"><span class="fa fa-plus"></span></a>
 
-  <a href="https://catalyze.pythonanywhere.com"><img src="http://i.imgur.com/l8dsevv.png" style="max-width:20%;></a>
+  <a href="{% url 'index' %}"><img src="http://i.imgur.com/l8dsevv.png" style="max-width:20%;></a>
 
   max-height: 20%;
   display: block;
