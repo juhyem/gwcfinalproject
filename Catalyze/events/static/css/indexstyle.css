@@ -270,7 +270,7 @@ span.psw {
 
 /* Showcase */
 #slideshow{
-  height: 360px;
+  height: 300px;
   /*background:url('http://volteface.me/app/uploads/2017/02/Closeup_of_protesters_at_Ginowan_protests_2009-11-08.jpg') no-repeat; */
  /* background: url('http://i.imgur.com/o2XVmbT.jpg') no-repeat 0 -300px;
   background-size: cover; */
@@ -287,7 +287,10 @@ span.psw {
   right: 10px;
   bottom: 200px;
   align-content: center;*/
-  height:300px;
+  line-height:300px;
+  height: 300px;
+
+
 }
 
 #slideshow h1{
@@ -302,6 +305,7 @@ span.psw {
 #slideshow h2{
   font-size:20px;
   color:#fff;
+  vertical-align: middle;
 }
 
 
