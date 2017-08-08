@@ -34,7 +34,7 @@
       <a href="{% url 'post_detail_detail' pk=post.pk %}">EVENT DETAILS</a>
       <a href="#about">RESERVE SPOTS</a>
       <a href="#contact">CONTACT</a>
-      <a href="https://catalyze.pythonanywhere.com" style="float:right;">Catalyze</a>
+      <a href="{% url 'index' %}" style="float:right;">Catalyze</a>
     </div>
     <table style="width:100%">
   <tr>
@@ -44,7 +44,7 @@
 </table>
     <div class="image-wrapper">
       <!-- <img class="bg" src="http://i.imgur.com/QNWXZ7N.jpg"/> -->
-      <img src = "http://i.imgur.com/QNWXZ7N.jpg"/>
+      <img src = "{{ post.image.url }}"/>
        <h2>{{ post.title }}</h2>
     </div>
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
