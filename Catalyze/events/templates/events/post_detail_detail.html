@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title>Model Event Page</title>
-    <!-- <link rel="stylesheet" href="EventDetails.css"> -->
+    <link rel="stylesheet" href="EventDetails.css">
   </head>
-<body>
+<body> -->
   <div class="topnav" id="myTopnav">
     <a href="better_eventpage.html">EVENT</a>
     <a href="#about">RESERVE SPOTS</a>
@@ -87,6 +91,8 @@ function openTab(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 </script>
-
+<!-- 
 </body>
-</html>
+</html> -->
+
+{% endblock %}
