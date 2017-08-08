@@ -22,7 +22,14 @@ from django.db import models
 
 from django.db import models
 from django.utils import timezone
+from django.core.files.storage import FileSystemStorage
 
+# upload_location = FileSystemStorage(location='/media/')
+
+from django.template.defaultfilters import slugify
+
+def upload_location(instance, filename):
+    return "%s/%s" %(instance.id, filename)
 
 class Event(models.Model):
     # user info
@@ -35,14 +42,33 @@ class Event(models.Model):
     cause = models.CharField(max_length=200)
     # location
     street_address = models.CharField(max_length=150)
+    city = models.CharField(max_length=150, null=True)
+    state = models.CharField(max_length=20, null=True)
+    zip_code = models.CharField(max_length=6, null=True)
     name_of_place = models.CharField(max_length=150)
     # time
-    start_date_and_time = models.DateTimeField()
-    end_date_and_time = models.DateTimeField()
+    start_date_and_time = models.CharField(max_length=50)
+    end_date_and_time = models.CharField(max_length=50)
     description = models.TextField()
     published_date = models.DateTimeField(
             blank=True, null=True)
-    # image = models.ImageField(upload_to=
+
+
+
+    # image = models.ImageField(
+    #     storage=upload_location, null=True,
+    #     blank=True, width_field="width_field",
+    #     height_field="height_field",)
+    image = models.FileField(
+        upload_to=upload_location,
+        null=True,
+        blank=True,
+        default = 'catalyzeLogo.png')
+        # width_field="width_field",
+        # height_field="height_field")
+
+    # height_field = models.IntegerField(default=0)
+    # width_field = models.IntegerField(default=0)
     def publish(self):
         self.published_date = timezone.now()
         self.save()

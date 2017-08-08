@@ -1,20 +1,51 @@
 {% extends 'events/base.html' %}
+{% load staticfiles %}
 {% block content %}
+<!-- <form id="live-search" action="" class="styled" method="post">
+  {% csrf_token %}
+    <fieldset>
+        <input type="text" class="text-input" id="filter" value="" />
+        <span id="filter-count"></span>
+    </fieldset>
+</form> -->
+<div class="search-container">
+    <form class="form-search form-inline">
+      {% csrf_token %}
+        <input type="text" class="input-medium search-query" placeholder="Enter a city, state, place, or zip code...">
+        <button type="submit" class="btn">Search</button>
+    </form>
+</div>
     {% for post in posts %}
     <!-- <div class="row">
 <div class="column"> -->
+<!-- <table>
+  <tr>
+    <td> -->
+
 <div class="card">
   <div class="post">
-  <img src="http://i.imgur.com/kYJz6hS.jpg" alt="Love" style="width:100%">
+  <!-- <img src="http://i.imgur.com/kYJz6hS.jpg" alt="Love" style="width:100%"> -->
+  <!-- <label for="id_image"> -->
+ <!-- {% if post.image %} -->
+  <div>
+    <img src="{{ post.image.url }}"
+    title="{{ p.title }}" alt="Love"
+    style="width: 100%">
+  </div>
+ <!-- {% endif %} -->
+    <!-- </label> -->
   <div class="container">
     <div class="date">
             {{ post.published_date }}
     </div>
     <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-    <!--h2>Cause/purpose: {{ post.cause }}</h2-->
-    <p class="title">{{ post.start_date_time }} to {{ post.end_date_and_time }}</p>
+    <!-- <h4>{{ post.cause }}</h4> -->
+    <p>{{ post.start_date_and_time }} to {{ post.end_date_and_time }}</p>
     <p>{{ post.name_of_place }}</p>
     <p>   {{ post.street_address }}</p>
+    <div class="location">
+    <p>{{ post.city }}, {{ post.state }} {{ post.zip_code }}</p>
+    </div>
     <div style="margin: 24px 0;">
       <a href="#"><i class="fa fa-bookmark-o"></i></a>
       <a href="#"><i class="fa fa-calendar-check-o"></i></a>
@@ -34,5 +65,21 @@
 </div>
 </div>
         </div>
+<script>
+$('.form-search').on('submit',function(){return false;});
+$('.form-search .btn').on('click', function(e){
+    var query = $.trim($(this).prevAll('.search-query').val()).toLowerCase();
+    $('div.card').each(function(){
+         var $this = $(this);
+         if($this.text().toLowerCase().indexOf(query) === -1)
+             $this.closest('div.card').fadeOut();
+        else $this.closest('div.card').fadeIn();
+    });
+});
+</script>
+
+    <!-- </td>
+  </tr>
+</table> -->
     {% endfor %}
 {% endblock %}

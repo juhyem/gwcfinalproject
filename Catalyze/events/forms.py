@@ -1,13 +1,15 @@
 from django import forms
 # from django.contrib.admin.widgets import AdminTimeWidget, AdminDateWidget
 from .models import Event
+from django.forms import DateTimeField
 
 class EventForm(forms.ModelForm):
 
+    # start_date_and_time = DateTimeField(input_formats=["%m/%d/%y %H:%M'"])
+    # end_date_and_time = DateTimeField(input_formats=["%m/%d/%y %H:%M'"])
     class Meta:
         model = Event
-        fields = ('title', 'cause', 'street_address', 'name_of_place', 'start_date_and_time', 'end_date_and_time', 'first_name', 'last_name', 'email', 'phone', 'description')
-
+        fields = ('title', 'cause', 'street_address', 'city', 'state', 'zip_code', 'name_of_place', 'start_date_and_time', 'end_date_and_time', 'first_name', 'last_name', 'email', 'phone', 'description', 'image')
 
     # start_time = forms.TimeField(widget = AdminTimeWidget)
     # start_date = forms.DateField(widget = AdminDateWidget)

@@ -8,6 +8,11 @@
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!--link rel="stylesheet" href="{% static 'css/catalyze-events.css' %}"-->
         <link rel="stylesheet" href="{% static 'css/indexstyle.css' %}">
+        <link rel="stylesheet" href="{% static 'css/create.css' %}">
+        <link rel="stylesheet" href="{% static 'css/new_eventpage.css' %}">
+        <link rel="stylesheet" href="{% static 'css/EventDetails.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -23,7 +28,7 @@
           box-sizing: inherit;
         }
 
-        .column {
+        /*.column {
           float: left;
           width: 33.3%;
           margin-bottom: 16px;
@@ -35,7 +40,7 @@
             width: 100%;
             display: block;
           }
-        }
+        }*/
 
         .card {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -117,7 +122,7 @@
             opacity: 0.7;
         }
 
-        .page-header span{
+        #main span{
           float:right;
           margin:10px;
           padding: 10px;
@@ -143,21 +148,27 @@
          <div id="mySidenav" class="sidenav">
 <ul>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <li><a href="https://catalyze.pythonanywhere.com">Home</a></li>
-  <li><a href="https://catalyze.pythonanywhere.com/post/new">Create Event</a></li>
-  <li class="current"><a href="https://catalyze.pythonanywhere.com/post">Find Event</a></li>
-  <li><a href="other.html">What else?</a></li>
+  <li><a href="{% url 'index' %}">Home</a></li>
+  <li><a href="{% url 'post_new' %}">Create Event</a></li>
+  <li class="current"><a href="{% url 'post_list' %}">Find Event</a></li>
+  <li><a href="{% url 'rights' %}">What else?</a></li>
 </ul>
 </div>
 
 <div id="main">
 
-  <img src="http://i.imgur.com/l8dsevv.png" style="max-width:20%;
+
+  <span style="font-size:30px;cursor:pointer; float:left;" onclick="openNav()">&#9776;</span>
+
+  <a href="{% url 'post_new' %}" class="top-menu"><span class="fa fa-plus"></span></a>
+
+  <a href="{% url 'index' %}"><img src="http://i.imgur.com/l8dsevv.png" style="max-width:20%;></a>
+
   max-height: 20%;
   display: block;
   margin: auto;">
 
-  <span style="font-size:30px;cursor:pointer; float:left;" onclick="openNav()">&#9776;</span>
+
 
 </div>
 
@@ -179,9 +190,7 @@ function closeNav() {
 
       <div class="page-header">
 
-
-          <a href="{% url 'post_new' %}" class="top-menu"><span class="fa fa-plus"></span></a>
-          <h1><a href="/post/">Events</a></h1>
+          <h1><a href="/post/">All Events</a></h1>
 
       </div>
       <div class="content container">

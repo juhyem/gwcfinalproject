@@ -10,17 +10,24 @@ from django.shortcuts import redirect
 def index(request):
     return render(request, 'events/index.html', {})
 
+def rights(request):
+    return render(request, 'events/knowyourights.html', {})
+
 def post_list(request):
-    posts = Event.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Event.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'events/post_list.html', {'posts' : posts})
 
 def post_detail(request, pk):
     post = get_object_or_404(Event, pk=pk)
     return render(request, 'events/post_detail.html', {'post': post})
+
+def post_detail_detail(request, pk):
+    post = get_object_or_404(Event, pk=pk)
+    return render(request, 'events/post_detail_detail.html', {'post': post})
 #
 def post_new(request):
     if request.method == "POST":
-        form = EventForm(request.POST)
+        form = EventForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             # post.author = request.user
@@ -34,7 +41,7 @@ def post_new(request):
 def post_edit(request, pk):
     post = get_object_or_404(Event, pk=pk)
     if request.method == "POST":
-        form = EventForm(request.POST, instance=post)
+        form = EventForm(request.POST, request.FILE or none)
         if form.is_valid():
             post = form.save(commit=False)
             # post.author = request.user
