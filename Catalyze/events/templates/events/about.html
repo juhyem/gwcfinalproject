@@ -1,9 +1,182 @@
 <!DOCTYPE html>
-<html>
-<body>
-<img src="GWC_4.png" alt=Ponyo width="200" height="250">
-<img src="GWC_5.png" alt=Anna width="200" height="250">
-<img src="GWC_6.png" alt=Neha width="200" height="250">
-<img src="GWC_7.png" alt=JuHye width="200" height="250">
-</body>
-</html>
+
+  <html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+    #img {
+      float: left;
+      margin: 0 0 20px 20px;
+  }
+
+    #logo {
+      float: right;
+      margin: 0 0 5px 5px;
+  }
+
+    #rcorners {
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 100px;
+    border: 0.25px solid #000000;
+    padding: 20px;
+    width: 1350px;
+    height: 265px;
+
+
+  }
+
+  #rcorners:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.rcorners1 {
+box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+border-radius: 100px;
+border: 0.25px solid #000000;
+padding: 20px;
+width: 900px;
+height: 250px;
+margin: auto;
+
+
+}
+
+.rcorners1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* drop down menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav ul{
+  list-style-type: : none;
+}
+
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+  </style>
+  </head>
+
+
+  <body>
+    <div id="mySidenav" class="sidenav">
+<ul>
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<li><a href="{% url 'index' %}">Home</a></li>
+<li><a href="{% url 'about' %}">About</a></li>
+<li><a href="{% url 'post_new' %}">Create Event</a></li>
+<li class="current"><a href="{% url 'post_list' %}">Find Event</a></li>
+<li><a href="{% url 'rights' %}">What else?</a></li>
+</ul>
+</div>
+
+
+<div id="about_title">
+  <h1 style="text-align:center">About<img src="http://i.imgur.com/l8dsevv.png" style="max-width:15%" align="middle"></h1>
+
+  <div class="rcorners1">
+    <p style="text-align:center">As social media continues to become increasingly prevalent in society, the rise of political awareness follows suit. After all, it only takes a single click to reach the multitude. Although
+      political awareness is valuable, it is naive to equate awareness with activism. We recognize that in order to achieve true political engagement, citizens must be present and engaged within their own communities,
+      rather than solely in a virtual environment.</p>
+    <p style="text-align:center">Here at Catalyze, we endeavor to build a product that bridges this chasm between awareness and activism. We feel that social media lacks the necessary tools when it comes to activism, so we wanted to create a product that extrapolates the  structure of pre-existing social networks into an accessible platform that people can use to go out and voice their beliefs in the real world.
+      By doing so, we hope to conduct the perfect marriage between awareness and activism. </p>
+  </div>
+<br>
+<br>
+<br>
+
+  <h1 style="text-align:center">The Creators</h1>
+  <div class=Patrice id="rcorners">
+    <img src="GWC_4.png" id="img" alt=Ponyo width="175" height="250">
+    <h1>Patrice</h1>
+    <p>HELLO!! My name is Patrice and I am an aspiring storyteller. I really love reading and being able to make things from scratch instead of buying them.
+      I have always loved crafts making personalized gifts or painting something for someone has always gave me great joy. My interest for film and photography
+      really intensified around 2015 when I entered high school and recently I started to make my own videos through which I hope to make smiles. :)</p>
+  </div>
+  <br>
+  <br>
+
+  <div class=Anna id="rcorners">
+  <img src="GWC_5.png" id="img" alt=Anna width="175" height="270">
+  <h1>Anna</h1>
+  <p>Hey there! I'm 17 years old and am currently a rising senior. Girls Who Code was my first experience with computer science and it has been the most
+  fulfilling adventure. This program has inspired me to continue studying CS and hopefully pursue it as a major in college. I would like to thank my teacher,
+  Kelsey, and my TAs, Jen and Kim, for always being so patient, kind, and willing to help. I'd also like to thank my amazing project group for being the best team
+  imaginable, and also being great friends, too.</p>
+  </div>
+  <br>
+  <br>
+
+  <div class=Neha id="rcorners">
+  <img src="GWC_6.png" id="img" alt=Neha width="175" height="250">
+  <h1>Neha</h1>
+  <p>fsdajkldafjlkfadsjlkdfsaj</p>
+  </div>
+  <br>
+  <br>
+
+  <div class=JuHye id="rcorners">
+  <img src="GWC_7.png" id="img" alt=JuHye width="175" height="262">
+  <h1>JuHye</h1>
+  <p>ajdfskljfadlkjfadsljdsaf</p>
+  </div>
+  <br>
+  <br>
+
+  <script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+  }
+  </script>
+
+  </body>
+  </html>
