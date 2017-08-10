@@ -10,6 +10,10 @@ from django.shortcuts import redirect
 def index(request):
     return render(request, 'events/index.html', {})
 
+def about(request):
+    return render(request, 'events/about.html', {})
+
+
 def rights(request):
     return render(request, 'events/knowyourights.html', {})
 
