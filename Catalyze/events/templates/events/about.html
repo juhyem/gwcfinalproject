@@ -74,7 +74,7 @@ margin: auto;
 }
 
 .sidenav ul{
-  list-style-type: : none;
+  list-style-type: none;
 }
 
 
@@ -105,20 +105,34 @@ margin: auto;
 
 
   <body>
-    <div id="mySidenav" class="sidenav">
+    
+    <!--menu-->
+      <div id="mySidenav" class="sidenav">
 <ul>
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<li><a href="{% url 'index' %}">Home</a></li>
-<li><a href="{% url 'about' %}">About</a></li>
-<li><a href="{% url 'post_new' %}">Create Event</a></li>
-<li class="current"><a href="{% url 'post_list' %}">Find Event</a></li>
-<li><a href="{% url 'rights' %}">What else?</a></li>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <li class="current"><a href="{% url 'index' %}">Home</a></li>
+  <li><a href="{% url 'post_new' %}">Create an Event</a></li>
+  <li><a href="{% url 'post_list' %}">Find Events</a></li>
+  <li><a href="{% url 'rights' %}">What else?</a></li>
+  <li><a href="{% url 'about' %}">About</a></li>
 </ul>
+</div>
+
+<div id="main">
+
+
+  <span style="font-size:30px;cursor:pointer; float: left;" onclick="openNav()">&#9776;</span>
+
+  <img src="http://i.imgur.com/l8dsevv.png" style="max-width:20%;
+  max-height: 20%;
+  display: block;
+  margin: auto;">
+
 </div>
 
 <div class = text>
 <div id="about_title">
-  <h1 style="text-align:center">About<img src="http://i.imgur.com/l8dsevv.png" style="max-width:15%" align="middle"></h1>
+  <h1 style="text-align:center">About</h1>
 
   <div class="rcorners1">
     <p style="text-align:center">As social media continues to become increasingly prevalent in society, the rise of political awareness follows suit. After all, it only takes a single click to reach the multitude. Although
